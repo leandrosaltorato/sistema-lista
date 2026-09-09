@@ -1,0 +1,176 @@
+:root {
+  --papel: #f5f2ea;
+  --papel-linha: #e5e0d2;
+  --tinta: #262524;
+  --tinta-suave: #7a766c;
+  --pinho: #3f6259;
+  --pinho-escuro: #314e46;
+  --tijolo: #a8503f;
+  --borda: #d9d3c3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins";
+  background-color: var(--papel);
+  color: var(--tinta);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.caderno {
+  display: flex;
+  width: 380px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(38, 37, 36, 0.12);
+  overflow: hidden;
+}
+
+.lateral {
+  width: 26px;
+  background-color: var(--pinho);
+}
+
+.pagina {
+  flex: 1;
+  padding: 28px 26px;
+}
+
+header {
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.subtitulo {
+  font-size: 13px;
+  color: var(--tinta-suave);
+  margin-top: 4px;
+}
+
+.form-tarefa {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+#input-tarefa {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 14px;
+  background-color: var(--papel);
+  color: var(--tinta);
+}
+
+#input-tarefa:focus {
+  outline: 2px solid var(--pinho);
+  outline-offset: 1px;
+}
+
+#btn-adicionar {
+  padding: 10px 18px;
+  background-color: var(--pinho);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+#btn-adicionar:hover {
+  background-color: var(--pinho-escuro);
+}
+
+#lista-tarefas {
+  list-style: none;
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+#lista-tarefas li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 2px;
+  border-bottom: 1px solid var(--papel-linha);
+  font-size: 14px;
+  animation: surgir 0.2s ease-out;
+}
+
+@keyframes surgir {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#lista-tarefas li span {
+  flex: 1;
+}
+
+.check {
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  border-radius: 50%;
+  border: 2px solid var(--pinho);
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+#lista-tarefas li.concluida .check {
+  background-color: var(--pinho);
+}
+
+#lista-tarefas li.concluida span {
+  text-decoration: line-through;
+  color: var(--tinta-suave);
+}
+
+.btn-remover {
+  background: none;
+  border: none;
+  color: var(--tijolo);
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 1;
+  padding: 4px;
+}
+
+#estado-vazio {
+  font-size: 13px;
+  color: var(--tinta-suave);
+  padding: 16px 2px;
+  display: none;
+}
+
+#progresso {
+  margin-top: 16px;
+  font-size: 12px;
+  color: var(--tinta-suave);
+}

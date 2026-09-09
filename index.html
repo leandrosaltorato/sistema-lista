@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lista de Tarefas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="caderno">
+      <div class="lateral"></div>
+
+      <div class="pagina">
+        <header>
+          <h1>Minhas Tarefas</h1>
+          <p class="subtitulo">O que precisa ser feito hoje</p>
+        </header>
+
+        <div class="form-tarefa">
+          <input
+            type="text"
+            id="input-tarefa"
+            placeholder="Digite uma tarefa..."
+          />
+          <button id="btn-adicionar">Adicionar</button>
+        </div>
+
+        <ul id="lista-tarefas"></ul>
+
+        <p id="estado-vazio">
+          Nenhuma tarefa por aqui, adicione a primeira acimaa
+        </p>
+
+        <p id="progresso"></p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
