@@ -2,6 +2,6 @@
 
 A atividade proposta está disponível no arquivo PDF presente neste repositório.
 
-📄 **[PDF](./atividade-lista-de-tarefas)**
+**[Atividade PDF](./atividade-lista-de-tarefas.pdf)**
 
 
